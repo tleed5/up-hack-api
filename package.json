@@ -1,0 +1,32 @@
+{
+  "name": "up-hack-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon -w src --ext ts --exec ts-node src/index.ts",
+    "generate-api": "openapi-generator generate -i docs/openapi.json -g typescript-node -o src/generated-sources/openapi --additional-properties=npmName=restClient,supportsES6=true,npmVersion=6.9.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/bluebird": "^3.5.32",
+    "@types/request": "^2.48.5",
+    "apollo-server": "^2.14.1",
+    "class-validator": "^0.12.2",
+    "graphql": "^15.0.0",
+    "reflect-metadata": "^0.1.13",
+    "sqlite3": "^4.2.0",
+    "type-graphql": "^1.0.0-rc.2",
+    "typeorm": "^0.2.25"
+  },
+  "devDependencies": {
+    "@openapitools/openapi-generator-cli": "^1.0.15-4.3.1",
+    "bluebird": "^3.7.2",
+    "nodemon": "^2.0.4",
+    "request": "^2.88.2",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.3"
+  }
+}
